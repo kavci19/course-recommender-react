@@ -4,12 +4,12 @@ import styles from './App.module.css'
 import {useState, useEffect} from 'react'
 import axios from 'axios';
 
+
 function App() {
 
   const [department, setDepartment] = useState("Accounting")
   const [courseList, setCourseList] = useState([])
 
-  
 
   useEffect(()=> {
 
