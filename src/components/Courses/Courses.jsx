@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'white',
         backgroundColor: 'grey',
         borderRadius: 8,
-        padding: '3px 10px',
+        padding: '10px 10px',
         display: 'inline-block'
     }
   }));
@@ -70,7 +70,7 @@ export default function Courses({courseList}) {
             <TableCell className={classes.tableHeaderCell}>Course Details</TableCell>
             <TableCell className={classes.tableHeaderCell}>Instructor</TableCell>
             <TableCell className={classes.tableHeaderCell}>Times</TableCell>
-            <TableCell className={classes.tableHeaderCell}>Status</TableCell>
+            <TableCell className={classes.tableHeaderCell}>Score</TableCell>
             <TableCell className={classes.tableHeaderCell}></TableCell>
           </TableRow>
         </TableHead>
@@ -100,9 +100,8 @@ export default function Courses({courseList}) {
                     className={classes.status}
                     style={{
                         backgroundColor: 
-                        ((row.status === 'Active' && 'green') ||
-                        (row.status === 'Pending' && 'blue') ||
-                        (row.status === 'Blocked' && 'orange'))
+                        ((row.nugget === 'Gold' && 'gold') ||
+                        (row.nugget === 'Silver' && 'grey'))
                     }}
                   >{row.status}</Typography>
                 </TableCell>
