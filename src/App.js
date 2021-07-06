@@ -9,16 +9,23 @@ function App() {
   const [department, setDepartment] = useState("Accounting")
   const [courseList, setCourseList] = useState([])
 
-  const getCourses = async () => {
+  
 
-    const url = "http://127.0.0.1:5000/courses/" + department
-    var {data} = await axios.get(url)
-    data = data['data']
-    setCourseList(data)
-    
-  }
+  useEffect(()=> {
 
-  useEffect(()=>getCourses(), [department])
+    const getCourses = async () => {
+
+      const url = "http://127.0.0.1:5000/courses/" + department
+      var {data} = await axios.get(url)
+      data = data['data']
+      setCourseList(data)
+      
+    }
+
+    getCourses()
+
+
+  }, [department])
 
   return (
     
