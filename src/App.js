@@ -32,7 +32,7 @@ function App() {
     <div className={styles.container}>
         <Title/>
         <SubjectPicker setDepartment = {setDepartment}/>
-        <Courses courseList = {courseList}/>
+        <Courses courseList = {courseList} department = {department}/>
     </div>
   );
 }

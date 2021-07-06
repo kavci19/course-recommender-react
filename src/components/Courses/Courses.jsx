@@ -8,6 +8,8 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
+import {useEffect} from 'react'
+
 import { 
     Grid,
     Typography,
@@ -48,10 +50,24 @@ const useStyles = makeStyles((theme) => ({
     }
   }));
 
-export default function Courses({courseList}) {
+export default function Courses({courseList, department}) {
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
+
+  useEffect(()=> {
+
+    const resetPage = () => {
+
+      setPage(0)
+    }
+
+    resetPage()
+
+    console.log('Resetting Page')
+
+
+  }, [department])
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
