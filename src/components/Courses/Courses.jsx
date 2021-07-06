@@ -64,9 +64,6 @@ export default function Courses({courseList, department}) {
 
     resetPage()
 
-    console.log('Resetting Page')
-
-
   }, [department])
 
   const handleChangePage = (event, newPage) => {
