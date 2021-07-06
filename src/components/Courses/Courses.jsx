@@ -68,6 +68,7 @@ export default function Courses({courseList}) {
         <TableHead>
           <TableRow>
             <TableCell className={classes.tableHeaderCell}>Course Details</TableCell>
+            <TableCell className={classes.tableHeaderCell}>Instructor</TableCell>
             <TableCell className={classes.tableHeaderCell}>Times</TableCell>
             <TableCell className={classes.tableHeaderCell}>Status</TableCell>
             <TableCell className={classes.tableHeaderCell}></TableCell>
@@ -92,6 +93,7 @@ export default function Courses({courseList}) {
                       </Grid>
                   </Grid>
                 </TableCell>
+              <TableCell>{row.instructor}</TableCell>
               <TableCell>{row.time}</TableCell>
               <TableCell>
                   <Typography 
