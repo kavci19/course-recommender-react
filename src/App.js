@@ -7,7 +7,7 @@ import axios from 'axios';
 
 function App() {
 
-  const [department, setDepartment] = useState("Accounting")
+  const [department, setDepartment] = useState(["Accounting"])
   const [courseList, setCourseList] = useState([])
 
 
@@ -15,12 +15,15 @@ function App() {
 
     const getCourses = async () => {
       
-      // const url = "http://127.0.0.1:5000/courses/" + department
-      const url = "https://course-rec-api.herokuapp.com/courses/" + department
-      var {data} = await axios.get(url)
+      const url = "http://127.0.0.1:5000/courses/"
+      // const url = "https://course-rec-api.herokuapp.com/courses/" + department
+      var {data} = await axios.get(url, {
+        params: {
+          deps: department
+        }
+      })
       data = data['data']
       setCourseList(data)
-      
     }
 
     getCourses()
