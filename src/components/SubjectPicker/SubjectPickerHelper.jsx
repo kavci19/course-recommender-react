@@ -4,7 +4,7 @@ import Popover from '@material-ui/core/Popover';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import styles from "./Chart.module.css";
-import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import InfoIcon from '@material-ui/icons/Info';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +31,7 @@ export default function Help() {
   return (
     <div className={styles.helpBar}>
       <Button aria-describedby={id} variant="text" onClick={handleClick} className={styles.helpBar}>
-      <div className={styles.buttonContent}> <HelpOutlineIcon/> </div>
+      <div className={styles.buttonContent}> <InfoIcon/> </div>
       </Button>
       <Popover className={styles.popoverWidth}
         id={id}

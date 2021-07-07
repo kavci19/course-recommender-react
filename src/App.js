@@ -4,12 +4,24 @@ import styles from './App.module.css'
 import {useState, useEffect} from 'react'
 import axios from 'axios';
 import Alert from '@material-ui/lab/Alert';
+import { makeStyles } from '@material-ui/core/styles';
 
+const useStyles = makeStyles({
+  subjectLine: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row'
+
+  },
+});
 
 function App() {
 
   const [department, setDepartment] = useState([])
   const [courseList, setCourseList] = useState([])
+
+  const classes = useStyles();
 
   useEffect(()=> {
 
@@ -39,8 +51,10 @@ console.log(department)
     
     <div className={styles.container}>
         <Title/>
-        <SubjectPickerHelper/>
+        <div className={classes.subjectLine}>
         <SubjectPicker setDepartment = {setDepartment}/>
+        <SubjectPickerHelper/>
+        </div>
         {courseList.length === 0 &&
                   
            <Alert severity="error">No top-rated courses found. Select a different department!</Alert>

@@ -1,7 +1,7 @@
 .container {
     display: flex;
     justify-content: center;
-    width: 65%;
+    width: 100%;
     margin-top:0%;
   }
   
@@ -13,7 +13,7 @@
   
   .helpBar{
     position: relative !important;
-    width:3%;
+    width:100%;
     font-weight: 1 !important;
     z-index: 99 !important;
   }
@@ -21,7 +21,7 @@
   .countryHelp{
   
     position: relative !important;
-    width:3%;
+    width:100%;
     font-weight: 1 !important;
     z-index: 99 !important;
     margin: 0;
@@ -30,7 +30,7 @@
   }
   .popoverWidth{
   
-      width:45%;
+      width:55%;
       left: 15% !important;
   
   }
