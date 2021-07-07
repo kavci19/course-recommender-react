@@ -15,8 +15,8 @@ function App() {
 
     const getCourses = async () => {
       
-      const url = "http://127.0.0.1:5000/courses/"
-      // const url = "https://course-rec-api.herokuapp.com/courses/" + department
+      // const url = "http://127.0.0.1:5000/courses/"
+      const url = "https://course-rec-api.herokuapp.com/courses/"
       var {data} = await axios.get(url, {
         params: {
           deps: department
