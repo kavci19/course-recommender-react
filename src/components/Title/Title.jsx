@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   root: {
-    marginBottom:20
+    marginBottom:1
   },
 });
 
@@ -18,7 +18,7 @@ const Title = () => {
 
         <div className={classes.root}>
             <Typography variant="h2" gutterBottom="true">
-                Course Recommender
+                CourseRec
             </Typography>
         </div>
     )

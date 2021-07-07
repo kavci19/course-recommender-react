@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    justify-content: center;
+    width: 65%;
+    margin-top:0%;
+  }
+  
+  @media only screen and (max-width: 770px) {
+    .container {
+      width: 100%;
+    }
+  }
+  
+  .helpBar{
+    position: relative !important;
+    width:3%;
+    font-weight: 1 !important;
+    z-index: 99 !important;
+  }
+  
+  .countryHelp{
+  
+    position: relative !important;
+    width:3%;
+    font-weight: 1 !important;
+    z-index: 99 !important;
+    margin: 0;
+  
+  
+  }
+  .popoverWidth{
+  
+      width:45%;
+      left: 15% !important;
+  
+  }

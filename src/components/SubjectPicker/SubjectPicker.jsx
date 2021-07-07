@@ -87,7 +87,7 @@ const SubjectPicker = ({setDepartment}) => {
                 id="subject-picker"
                 options={optionsList}
                 //getOptionLabel={(option) => option.title}
-                style={{ width: 300, marginBottom: 20 }}
+                style={{ width: 300, margin: 20 }}
                 renderInput={(params) => <TextField {...params} label="Type in subjects..." variant="outlined" />}
                 autoComplete={true}
                 onChange={(event, value) => setDepartment(value)}
